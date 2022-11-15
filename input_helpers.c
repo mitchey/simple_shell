@@ -60,7 +60,7 @@ int call_args(char **args, char **front, int *exe_ret)
 		return (*exe_ret);
 	for (index = 0; args[index]; index++)
 	{
-		if (_strncmp(args[index], "||", 2) == 0)
+		if (strncmp(args[index], "||", 2) == 0)
 		{
 			free(args[index]);
 			args[index] = NULL;
