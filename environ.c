@@ -13,7 +13,7 @@ char **_getenv(const char *var);
 char **_copyenv(void)
 {
 	char **new_environ;
-	size_T size;
+	size_t size;
 	int index;
 
 	for (size = 0; environ[size]; size++)
