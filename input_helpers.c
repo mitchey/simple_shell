@@ -172,7 +172,7 @@ int handle_args(int *exe_ret)
 
 	for (index = 0; args[index]; index++)
 	{
-		if (_strncmp(args[index], ";", 1) == 0)
+		if (strncmp(args[index], ";", 1) == 0)
 		{
 			free(args[index]);
 			args[index] = NULL;
