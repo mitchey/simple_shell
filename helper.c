@@ -113,20 +113,25 @@ void variable_replacement(char **line, int *exe_ret)
 
 	for (j = 0; old_line[j]; j++)
 	{
-		if (old_line[j] == '$' && old_linr[j + 1] && old_line[j + 1] != ' ')
+		if (old_line[j] == '$' && old_line[j + 1] && old_line[j + 1] != ' ')
 		{
 			if (old_line[j + 1] == '$')
 			{
 				replacement = get_pid();
 				k = j + 2;
 			}
-			else if (old_line[j + ])
+			else if (old_line[j + 1] == '?')
+			{
+				replacement = _itoa(*exe_ret);
+				k = j + 2;
+			}
+			else if (old_line[j + 1])
 			{
 				/* extract the variable name to search for */
 				for (k = j + 1; old_line[k] && old_line[k] != '$' && old_line[k] != ' '; k++)
 					;
 				len = k - (j + 1);
-				replacement = get_env_value(&old_line[j + 1], len)
+				replacement = get_env_value(&old_line[j + 1], len);
 			}
 			new_line = malloc(j + _strlen(replacement) + _strlen(&old_line[k]) + 1);
 			if (!line)
