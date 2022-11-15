@@ -74,8 +74,8 @@ int proc_file_commands(char *file_path, int *exe_ret)
 		b_read = read(file, buffer, 119);
 		if (b_read == 0 && line_size == 0)
 			return (*exe_ret);
-		buffer[b_read] = '\0':
-			line_size += b_read;
+		buffer[b_read] = '\0';
+		line_size += b_read;
 		line = _realloc(line, old_size, line_size);
 		_strcat(line, buffer);
 		old_size = line_size;
