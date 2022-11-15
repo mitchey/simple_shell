@@ -34,7 +34,7 @@ char *get_pid(void)
 	char *buffer;
 	ssize_t file;
 
-	file = open("/proc/self/stat", 0_RDONLY);
+	file = open("/proc/self/stat", O_RDONLY);
 
 	if (file == -1)
 	{
@@ -78,7 +78,7 @@ char *get_env_value(char *beginning, int len)
 	if (!var)
 		return (NULL);
 	var[0] = '0';
-	_srncat(var, beginning, len);
+	_strncat(var, beginning, len);
 
 	var_addr = _getenv(var);
 	
