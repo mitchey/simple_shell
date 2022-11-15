@@ -107,7 +107,7 @@ int proc_file_commands(char *file_path, int *exe_ret)
 
 	for (i = 0; args[i]; i++)
 	{
-		if (_strncmp(args[i], ";", 1) == 0)
+		if (strncmp(args[i], ";", 1) == 0)
 		{
 			free(args[i]);
 			args[i] = NULL;
