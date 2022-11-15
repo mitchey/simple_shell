@@ -64,7 +64,7 @@ void help_cd(void)
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "command is interpreted as cd $HOME. If the argument '-' is";
 	write(STDOUT_FILENO, msg, _strlen(msg));
-	msg = "given, the command is interpreted as cd $OLDPWD.\n\n;
+	msg = "given, the command is interpreted as cd $OLDPWD.\n\n";
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "after a change of directory.\n";
 	write(STDOUT_FILENO, msg, _strlen(msg));
