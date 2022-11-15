@@ -69,7 +69,7 @@ void handle_line(char **line, ssize_t read)
 					continue;
 				}
 			}
-			else if (current = '|')
+			else if (current == '|')
 			{
 				if (next == '|' && previous != ' ')
 					new_line[j++] = ' ';
@@ -165,7 +165,7 @@ ssize_t get_new_len(char *line)
  * @new_len: Pointer to new_len in get_new_len function.
  */
 
-void logical_ops(chars *line, ssize_t *new_len)
+void logical_ops(char *line, ssize_t *new_len)
 {
 	char previous, current, next;
 
