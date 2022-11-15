@@ -58,7 +58,7 @@ int call_args(char **args, char **front, int *exe_ret)
 
 	if (!args[0])
 		return (*exe_ret);
-	fro (index = 0; args[index]; index++)
+	for (index = 0; args[index]; index++)
 	{
 		if (_strncmp(args[index], "||", 2) == 0)
 		{

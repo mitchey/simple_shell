@@ -70,6 +70,9 @@ char **_strtok(char *line, char *delim)
 
 	ptr = malloc(sizeof(char *) * (tokens + 2));
 	if (!ptr)
+		return (NULL);
+
+	for (t = 0; t < tokens; t++)
 	{
 		while (line[index] == *delim)
 			index++;

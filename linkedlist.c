@@ -88,7 +88,7 @@ list_t *add_node_end(list_t **head, char *dir)
 
 void free_alias_list(alias_t *head)
 {
-	alais_t *next;
+	alias_t *next;
 
 	while (head)
 	{
