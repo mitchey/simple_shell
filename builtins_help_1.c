@@ -26,7 +26,7 @@ void help_all(void)
 	msg = "\n setenv \tsetenv [VARIABLE] [VALUE]\n unsetenv\t";
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "unsetenv [VARIABLE]\n";
-	wrte(STDOUT_FILENO. msg, _strlen(msg));
+	write(STDOUT_FILENO, msg, _strlen(msg));
 }
 
 /**
