@@ -1,1 +1,1 @@
-Simole Shell Project by Michael Uzor and Mercy Aloh
+Simple Shell Project by Michael Uzor and Mercy Aloh
