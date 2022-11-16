@@ -16,7 +16,8 @@ void print_alias(alias_t *alias);
 int xshell_alias(char **args, char __attribute__((__unused__)) **front)
 {
 	alias_t *temp = aliases;
-	int i, ret = 0;
+	int i;
+	ret = 0;
 	char *value;
 
 	if (!args[0])
@@ -28,6 +29,7 @@ int xshell_alias(char **args, char __attribute__((__unused__)) **front)
 		}
 		return (ret);
 	}
+	
 	for (i = 0; args[i]; i++)
 	{
 		temp = aliases;
@@ -70,6 +72,7 @@ void set_alias(char *var_name, char *value)
 	value++;
 	len = _strlen(value) - _strspn(value, "'\"");
 	new_value = malloc(sizeof(char) * (len + 1));
+	
 	if (!new_value)
 		return;
 	for (j = 0, k = 0; value[j]; j++)
