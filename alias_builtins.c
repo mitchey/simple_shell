@@ -16,8 +16,7 @@ void print_alias(alias_t *alias);
 int xshell_alias(char **args, char __attribute__((__unused__)) **front)
 {
 	alias_t *temp = aliases;
-	int i;
-	ret = 0;
+	int i, ret = 0;
 	char *value;
 
 	if (!args[0])
